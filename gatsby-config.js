@@ -1,15 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: 'Tania Rascia',
+    title: 'Xein Shamim',
     author: {
-      name: 'Tania Rascia',
+      name: 'Xein Shamim',
     },
     pathPrefix: '/',
-    siteUrl: 'https://www.taniarascia.com',
+    siteUrl: 'https://www.xeinshamim.netlify.app',
     description:
       'Software engineer and open-source creator. This is my digital garden.',
-    feedUrl: 'https://www.taniarascia.com/rss.xml',
-    logo: 'https://www.taniarascia.com/logo.png',
+    feedUrl: 'https://www.xeinshamim.netlify.app/rss.xml',
+    logo: 'https://www.xeinshamim.netlify.app/logo.png',
   },
   plugins: [
     // ===================================================================================
@@ -58,7 +58,7 @@ module.exports = {
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   custom_elements: [
                     { 'content:encoded': edge.node.html },
-                    { author: 'hello@taniarascia.com' },
+                    { author: 'hello@xeinshamim.netlify.app' },
                   ],
                 })
               })
@@ -88,7 +88,7 @@ module.exports = {
               }
             `,
             output: '/rss.xml',
-            title: 'Tania Rascia | RSS Feed',
+            title: 'Xein Shamim | RSS Feed',
           },
         ],
       },
