@@ -1,6 +1,6 @@
 const config = {
   siteTitle: 'Xein Shamim',
-  siteUrl: 'https://www.xein.netlify.com',
+  siteUrl: 'https://www.xeinshamim.netlify.app',
   siteLogo: '/logo.png',
   description:
     'Software engineer and open source creator. This is my digital garden.',
