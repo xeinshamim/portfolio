@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useMemo } from 'react'
-import { Link, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 
 import { Layout } from '../components/Layout'
@@ -111,55 +110,3 @@ export default function WebsiteIndex({ data }) {
   )
 }
 
-WebsiteIndex.Layout = Layout
-
-export const pageQuery = graphql`
-  query IndexQuery {
-    latest: allMarkdownRemark(
-      limit: 7
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { template: { eq: "post" } } }
-    ) {
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            tags
-          }
-        }
-      }
-    }
-    highlights: allMarkdownRemark(
-      limit: 99
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { categories: { eq: "Highlight" } } }
-    ) {
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            shortTitle
-            tags
-            thumbnail {
-              childImageSharp {
-                fixed(width: 25, height: 25) {
-                  ...GatsbyImageSharpFixed
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
